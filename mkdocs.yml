@@ -1,0 +1,40 @@
+site_name: 'USP Core Authenticate documentation'
+docs_dir: './docs'                        # Where to find the English markdown files
+site_dir: './generated'                      # Where to put the English HTML files
+#site_url: 'https://github.com/waf'
+
+theme:
+  name: material
+  custom_dir: './overrides/'                  # This is where the customization of the theme lives
+  logo: assets/images/USP-Logo-2023-ohne-claim-lang-white1.webp                 # The logo is shared by all languages
+  favicon: assets/images/favicon.png              # The favicon is shared by all languages
+  language: en                                    # The build's language
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: en                                      # Set language for search
+  - swagger-ui-tag:
+      supportedSubmitMethods: []
+      validatorUrl: none
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+nav:
+  - Welcome: 'index.md'
+  - Release Notes:
+      - Core Authenticate: 'authenticate-CHANGELOG.md'
+  - Configuration:
+    - Settings: 'configuration.md'
+  - Operation:
+    - Core Authenticate Upgrade: 'upgrade.md'
+  - Downloads: 'downloads.md'
