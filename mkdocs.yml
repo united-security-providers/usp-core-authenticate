@@ -39,6 +39,7 @@ nav:
     - Settings:
       - General:
         - Authentication: 'authentication.md'
+        - Challenge/Response: 'challenge_response.md'
         - Models: 'models.md'
         - Logging: 'logging.md'
       - OIDC OP:
