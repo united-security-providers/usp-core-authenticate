@@ -139,7 +139,7 @@ echo "Successfully generated site (Markdown) at ./docs."
 
 if [ "$2" == "deploy" ]; then
     echo "Deploying to GitHub pages..."
-    mkdocs gh-deploy
+    mkdocs gh-deploy --force
     echo "Successfully deployed to to GitHub pages"
 fi
 

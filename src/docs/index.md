@@ -13,10 +13,6 @@ standards and protocols. Such as (but not limited to):
 * OpenID Connect - Commonly used for API access and JavaScript applications
 * SAML 2.0 Identity Provider - To support classic web applications
 
-## Configuring Core Authenticate
-
-TBD
-
 ## Getting Started
 
 To pull the Core Authenticate container image you need a key. Get in contact with us, we are looking forward to support you.
