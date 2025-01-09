@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../releasenotes/" rel="prev"/>
-<link href="../configuration/" rel="next"/>
+<link href="../container/" rel="prev"/>
+<link href="../challenge_response/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
-<title>Internals - USP Core Authenticate documentation</title>
+<title>Authentication - USP Core Authenticate documentation</title>
 <link href="../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#internals">
+<a class="md-skip" href="#authentication-settings">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Internals
+              Authentication
             
           </span>
 </div>
@@ -144,17 +144,52 @@
             Configuration
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../container/">
+<span class="md-ellipsis">
+    Container Internals
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Settings
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Settings
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+<span class="md-ellipsis">
+    General
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_1_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_1">
+<span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <span class="md-ellipsis">
-    Internals
+    Authentication
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Internals
+    Authentication
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -164,9 +199,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sls-tomcat-and-web-application">
+<a class="md-nav__link" href="#select-authentication-type">
 <span class="md-ellipsis">
-      SLS Tomcat and Web Application
+      Select authentication type
     </span>
 </a>
 </li>
@@ -174,11 +209,93 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../configuration/">
+<a class="md-nav__link" href="../challenge_response/">
 <span class="md-ellipsis">
-    Settings
+    Challenge/Response
   </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../models/">
+<span class="md-ellipsis">
+    Models
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../logging/">
+<span class="md-ellipsis">
+    Logging
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    OIDC OP
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_2">
+<span class="md-nav__icon md-icon"></span>
+            OIDC OP
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oidc-settings.md">
+<span class="md-ellipsis">
+    OIDC Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../oidc-models.md">
+<span class="md-ellipsis">
+    Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    SAML 2.0 IdP
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_3">
+<span class="md-nav__icon md-icon"></span>
+            SAML 2.0 IdP
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../saml-idp-settings.md">
+<span class="md-ellipsis">
+    IdP Settings
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../saml-idp-models.md">
+<span class="md-ellipsis">
+    Models
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
@@ -305,9 +422,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sls-tomcat-and-web-application">
+<a class="md-nav__link" href="#select-authentication-type">
 <span class="md-ellipsis">
-      SLS Tomcat and Web Application
+      Select authentication type
     </span>
 </a>
 </li>
@@ -318,26 +435,32 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="internals">Internals</h1>
-<h2 id="sls-tomcat-and-web-application">SLS Tomcat and Web Application</h2>
-<p>The Core Authenticate container runs a Tomcat instance with a Secure Login Service (SLS) instance. </p>
+<h1 id="authentication-settings">Authentication Settings</h1>
+<p>During an OIDC or a SAML flow, the SLS at some point has to authenticate the user. There are a number of mechanisms
+available in the SLS to support this:</p>
 <ul>
-<li>External plain HTTP listening port: 8080</li>
-<li>External secure HTTPS listening port: none</li>
+<li>LDAP: Identify the user with an LDAP directory service.</li>
+<li>RADIUS: Use a RADIUS server to authenticate the user. </li>
+<li>SPNEGO: Authenticate the user through HTTP-based Kerberos.</li>
+<li>HTTP: Perform a custom HTTP call to a backend (REST or otherwise) to verify the user credentials. </li>
+<li>PKI: Use X509 certificates to identify the user.</li>
+<li>File: For testing or demo purposes only: Use a local XML file in the SLS with pre-defined users and passwords.</li>
 </ul>
-<p>As of now, there is no HTTPS port configured. You may do this yourself, if necessary, by mounting a custom
-Tomcat configuration into the "conf" subdirectory of the Tomcat instance.</p>
-<p>The SLS is a Java web application in the Tomcat "webapp" folder. The directory structure as a whole looks like this:</p>
-<p>/<tomcat base="" path="">/
-  webapp/
-    sls/
-      WEB-INF/   -  Most SLS configuration files are stored in this directory
-        jsp/     -  The JSPs (Java Server Pages) are stored here
-  ...MORE TBD....</tomcat></p>
-<p>This is relevant in case it is necessary to mount custom configuration. In order to use custom JSPs, for instance,
-it would be necessary to mount a volume with the custom JSPs into the "jsp" subfolder of the SLS "WEB-INF" directory.</p>
-<p>When running the container in Kubernetes, it is also possible to use "ConfigMap" manifests instead of actual volumes
-(see ####TODO#### for details and examples).</p>
+<p>By default, no authentication is configured in the "Core Authenticate" container, so one MUST be defined first before
+any login attempt is possible.</p>
+<h2 id="select-authentication-type">Select authentication type</h2>
+<p>In order to perform the authentication step in the login model ("do.auth", "do.auth2", "do.auth3" etc.) the desired
+backend adapter must be configured using a simple alias (usually the backend type as a lower-case string):</p>
+<ul>
+<li>LDAP: <code>ldap</code></li>
+<li>RADIUS: <code>radius</code></li>
+<li>SPNEGO: <code>spnego</code></li>
+<li>HTTP: <code>http</code></li>
+<li>PKI: <code>pki</code></li>
+<li>File: <code>file</code></li>
+</ul>
+<p>For details on how to configure each authentication backend please consult the 
+<a href="../files/5.19.0.4/html-admin-guide/sls-adminguide.html#_adapters_authentication_systems">SLS Administration Guide</a></p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../upgrade/" rel="prev"/>
-<link href="../pdf-documentation/" rel="next"/>
+<link href="../releasenotes/" rel="prev"/>
+<link href="../authentication/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
-<title>HTML - USP Core Authenticate documentation</title>
+<title>Container Internals - USP Core Authenticate documentation</title>
 <link href="../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#sls-html-documentation">
+<a class="md-skip" href="#container-internals">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              HTML
+              Container Internals
             
           </span>
 </div>
@@ -130,26 +130,112 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     Configuration
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../container/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    Container Internals
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     Container Internals
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sls-tomcat-and-web-application">
+<span class="md-ellipsis">
+      SLS Tomcat and Web Application
+    </span>
+</a>
+<nav aria-label="SLS Tomcat and Web Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#base-directories">
+<span class="md-ellipsis">
+      Base directories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-files">
+<span class="md-ellipsis">
+      Log files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tomcat-configuration">
+<span class="md-ellipsis">
+      Tomcat configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-sls-configuration">
+<span class="md-ellipsis">
+      Main SLS configuration
+    </span>
+</a>
+<nav aria-label="Main SLS configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-customization">
+<span class="md-ellipsis">
+      Configuration Customization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-custom-configuration">
+<span class="md-ellipsis">
+      Example Custom Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jsps">
+<span class="md-ellipsis">
+      JSPs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kubernetes-considerations">
+<span class="md-ellipsis">
+      Kubernetes Considerations
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
@@ -347,23 +433,22 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
 <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
 <span class="md-ellipsis">
     SLS Documentation
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_5">
 <span class="md-nav__icon md-icon"></span>
             SLS Documentation
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../html-documentation/">
 <span class="md-ellipsis">
     HTML
   </span>
@@ -395,19 +480,165 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sls-tomcat-and-web-application">
+<span class="md-ellipsis">
+      SLS Tomcat and Web Application
+    </span>
+</a>
+<nav aria-label="SLS Tomcat and Web Application" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#base-directories">
+<span class="md-ellipsis">
+      Base directories
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#log-files">
+<span class="md-ellipsis">
+      Log files
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tomcat-configuration">
+<span class="md-ellipsis">
+      Tomcat configuration
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#main-sls-configuration">
+<span class="md-ellipsis">
+      Main SLS configuration
+    </span>
+</a>
+<nav aria-label="Main SLS configuration" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuration-customization">
+<span class="md-ellipsis">
+      Configuration Customization
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#example-custom-configuration">
+<span class="md-ellipsis">
+      Example Custom Configuration
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#jsps">
+<span class="md-ellipsis">
+      JSPs
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#kubernetes-considerations">
+<span class="md-ellipsis">
+      Kubernetes Considerations
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="sls-html-documentation">SLS HTML Documentation</h1>
+<h1 id="container-internals">Container Internals</h1>
+<h2 id="sls-tomcat-and-web-application">SLS Tomcat and Web Application</h2>
+<p>The Core Authenticate container runs a Tomcat instance with a Secure Login Service (SLS) instance. </p>
 <ul>
-<li><a href="../files/5.19.0.4/html-admin-guide/sls-adminguide.html">Administration Guide</a></li>
-<li><a href="../files/5.19.0.4/html-scripting-guide/sls-scripting-guide.html">Scripting Guide</a></li>
-<li><a href="../files/5.19.0.4/html-taglib-guide/sls-taglib-guide.html">JSP Taglib Guide</a></li>
-<li><a href="../files/5.19.0.4/whats_new.html">What's New</a></li>
+<li>External plain HTTP listening port: 8080</li>
 </ul>
+<p>As of now, there is no HTTPS port configured. You may do this yourself, if necessary, by mounting a custom
+Tomcat configuration into the "conf" subdirectory of the Tomcat instance.</p>
+<h3 id="base-directories">Base directories</h3>
+<p>The base (aka "CATALINA_HOME") directory of the Tomcat instance is</p>
+<ul>
+<li><code>/usr/share/usp/sls/</code></li>
+</ul>
+<p>The SLS is a Java web application in the Tomcat "webapp/sls" subfolder:</p>
+<ul>
+<li><code>/usr/share/usp/sls/webapps/sls/</code></li>
+</ul>
+<h3 id="log-files">Log files</h3>
+<p>All SLS log files are written to the "logs" subfolder of the Tomcat instance:</p>
+<ul>
+<li><code>/usr/share/usp/sls/logs/</code></li>
+</ul>
+<h3 id="tomcat-configuration">Tomcat configuration</h3>
+<p>The Tomcat configuration ("server.xml" with listeners etc.) is, as usual, in the "conf" subfolder of the Tomcat instance:</p>
+<ul>
+<li><code>/usr/share/usp/sls/conf/</code></li>
+</ul>
+<h3 id="main-sls-configuration">Main SLS configuration</h3>
+<p>Most SLS configuration files are within the <code>WEB-INF</code> subfolder:</p>
+<ul>
+<li><code>/usr/share/usp/sls/webapps/sls/WEB-INF/</code></li>
+</ul>
+<h4 id="configuration-customization">Configuration Customization</h4>
+<p>NOTE: In most use-cases it will not be necessary to mount any external files in here. Instead, the SLS in this container
+provides a pre-configured override mechanism which allows to mount one single properties file into a special pre-defined 
+path; any configuration property set in a properties file in that path will override a corresponding pre-configured 
+property in the SLS web application.</p>
+<p>Configuration override path:</p>
+<ul>
+<li><code>/var/lib/usp/sls/config</code></li>
+</ul>
+<p>Any properties file mounted into this path will be processed by the SLS at startup time, and any configuration properties
+found there (either in one single or in multiple properties files) will automatically be used and prioritized over
+the configuration properties in the internal default configuration.</p>
+<p>Generally speaking, all properties-based SLS configuration can be put into a single file. It can be split up into 
+multiple files in order to help organizing and grouping settings, but the SLS will internally merge them all into 
+a single Java properties object.</p>
+<h4 id="example-custom-configuration">Example Custom Configuration</h4>
+<p>So, in order to configure the SLS to use the LDAP adapter for authentication and to set the LDAP adapter settings,
+a properties file with the following example contents would have to be mounted into this example path:</p>
+<ul>
+<li>File: <code>override.properties</code></li>
+<li>Mount path: <code>/var/lib/usp/sls/config/override.properties</code></li>
+<li>Contents:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="na">adapter.authentication</span><span class="o">=</span><span class="s">ldap</span>
+<span class="na">ldap.url</span><span class="o">=</span><span class="s">#{var('ldap_backend_system')}</span>
+<span class="na">ldap.principal.default</span><span class="o">=</span><span class="s">myLdapTechPrincipal</span>
+<span class="na">ldap.password.default</span><span class="o">=</span><span class="s">12345678</span>
+<span class="na">ldap.auth.type</span><span class="o">=</span><span class="s">bind</span>
+<span class="na">ldap.auth.bind.principal</span><span class="o">=</span><span class="s">#{var('ldap.search.dn')}</span>
+<span class="na">ldap.auth.search.1</span><span class="o">=</span><span class="s">l=partners,dc=acme,dc=com</span>
+<span class="na">ldap.auth.search.2</span><span class="o">=</span><span class="s">l=employees,dc=acme,dc=com</span>
+<span class="na">ldap.auth.search.attributes</span><span class="o">=</span><span class="s">modifiersName,subschemaSubentry</span>
+<span class="na">ldap.auth.filter</span><span class="o">=</span><span class="s">(cn=#{session.getCred('username')})</span>
+<span class="na">ldap.auth.successful.search.required</span><span class="o">=</span><span class="s">true</span>
+</code></pre></div>
+<h3 id="jsps">JSPs</h3>
+<p>All the JSP files (Java Server Pages) for the HTML frontend are in the <code>jsp</code> subfolder:</p>
+<ul>
+<li><code>/usr/share/usp/sls/webapps/sls/WEB-INF/jsp/</code></li>
+</ul>
+<p>When using custom JSP files, the external volume containing the custom JSPs must be mounted into this path.</p>
+<h2 id="kubernetes-considerations">Kubernetes Considerations</h2>
+<p>When running the container in Kubernetes, it is also possible to use "ConfigMap" manifests instead of actual volumes
+(see ####TODO#### for details and examples).</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
