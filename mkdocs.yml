@@ -32,11 +32,16 @@ markdown_extensions:
 nav:
   - Welcome: 'index.md'
   - Release Notes:
+#      - Core Authenticate: 'changelog.md'
       - Secure Login Service: 'releasenotes.md'
-      - Core Authenticate: 'changelog.md'
   - Configuration:
     - Internals: 'internals.md'
     - Settings: 'configuration.md'
+    - Kubernetes Manifests:
+        - Service: 'config_k8s_service.md'
+        - Deployment: 'config_k8s_deployment.md'
+        - Secrets: 'config_k8s_secret.md'
+        - Service: 'config_k8s_service.md'
   - Operation:
     - Core Authenticate Upgrade: 'upgrade.md'
   - SLS Documentation:
