@@ -137,7 +137,7 @@ done
 
 echo "Successfully generated site (Markdown) at ./docs."
 
-if [ "$3" == "deploy" ]; then
+if [ "$2" == "deploy" ]; then
     echo "Deploying to GitHub pages..."
     mkdocs gh-deploy
     echo "Successfully deployed to to GitHub pages"
