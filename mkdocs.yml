@@ -32,9 +32,14 @@ markdown_extensions:
 nav:
   - Welcome: 'index.md'
   - Release Notes:
-      - Core Authenticate: 'authenticate-CHANGELOG.md'
+      - Secure Login Service: 'releasenotes/'
+      - Core Authenticate: 'changelog.md'
   - Configuration:
+    - Internals: 'internals.md'
     - Settings: 'configuration.md'
   - Operation:
     - Core Authenticate Upgrade: 'upgrade.md'
+  - SLS Documentation:
+    - HTML: 'html-documentation.md'
+    - PDF: 'pdf-documentation.md'
   - Downloads: 'downloads.md'

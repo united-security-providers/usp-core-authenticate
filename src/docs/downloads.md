@@ -5,6 +5,7 @@
 The "Core Authenticate" container runs an instance of the 
 "USP Secure Login Service (SLS)".
 
-- SLS Container: [container-url]
+SLS Container Image: 
 
-[container-url]: https://azure-prod-usp-TODO/usp/core/sls/sls:%SLS_VERSION%
+- ```https://devuspregistry.azurecr.io/usp/core/sls/sls:%SLS_VERSION%```
+

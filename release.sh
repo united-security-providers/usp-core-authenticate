@@ -53,11 +53,16 @@ downloadFromNexus() {
   wget -O info.json $query
   downloadUrl=`cat info.json | grep -v '\-sources' | grep -a -m 1 -h "downloadUrl" | grep -Po 'downloadUrl" : "\K[^"]*'`
   rm info.json
-  if [ -z "$classifier" ]
-  then
-    wget -O $artifactId-$version.$type $downloadUrl
+
+  if [[ -z "$classifier" ]]; then
+    filename=$artifactId-$version.$type
   else
-    wget -O $artifactId-$version-$classifier.$type $downloadUrl
+    filename=$artifactId-$version-$classifier.$type
+  fi
+
+  wget -O $filename $downloadUrl
+  if [[ "$type" == "zip" || "$type" == "jar" ]]; then
+    jar xvf $filename
   fi
 }
 
@@ -90,12 +95,22 @@ cd build
 
 echo "-------------------------------------------------------------"
 echo "Selected Core Authenticate release: $SLS_VERSION"
-echo "Selected Helm chart release: $CHARTS_VERSION"
-echo "Operator release in Helm chart: $OPERATOR_VERSION"
-echo "Spec lib release in Helm chart: $SPEC_VERSION"
 echo "-------------------------------------------------------------"
 
-downloadFromNexus $SLS_VERSION com.usp.sls.framework sls-release-notes jar ""
+mkdir sls-docs
+cd sls-docs
+
+# Download SLS release notes
+downloadFromNexus $SLS_VERSION com.usp.sls.framework sls-release-notes jar
+
+# Download generated docs bundle (PDFs and HTML)
+downloadFromNexus $SLS_VERSION com.usp.sls.framework sls-generated-docs zip docs
+
+# Download "What's New" doc
+downloadFromNexus $SLS_VERSION com.usp.sls.framework sls-docs jar whatsnew
+
+rm *.zip
+rm *.jar
 
 # =====================================================================
 # Begin site build
@@ -106,10 +121,12 @@ cd $DIR
 
 # Copy base markdown files from sources
 cp -R src/docs ./docs
+cp build/sls-docs/releasenotes.md ./docs/
 
 #########prepareChangelog build/waap-$CORE_Authenticate_VERSION-changelog.md ./docs/waap-CHANGELOG.md
 
-mkdir -p ./docs/files
+mkdir -p ./docs/files/$SLS_VERSION
+cp -r ./build/sls-docs/* ./docs/files/$SLS_VERSION/
 
 # Replace version placeholders in all markdown files
 for file in ./docs/*; do
