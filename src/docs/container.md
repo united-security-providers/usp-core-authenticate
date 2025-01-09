@@ -25,9 +25,6 @@ Most SLS configuration files are within the ```WEB-INF``` subfolder:
 
 - ```/usr/share/usp/sls/webapps/sls/WEB-INF/```
 
-If an external volume is mounted into this directory, it must contain ALL the configuration files required and 
-expected by the SLS in this directory (see "SLS Administration Guide" TODO for details).
-
 #### Configuration Customization
 
 NOTE: In most use-cases it will not be necessary to mount any external files in here. Instead, the SLS in this container
@@ -56,7 +53,8 @@ a properties file with the following example contents would have to be mounted i
 - Mount path: ```/var/lib/usp/sls/config/override.properties```
 - Contents:
 
-```adapter.authentication=ldap
+```properties
+adapter.authentication=ldap
 ldap.url=#{var('ldap_backend_system')}
 ldap.principal.default=myLdapTechPrincipal
 ldap.password.default=12345678
@@ -71,7 +69,7 @@ ldap.auth.successful.search.required=true
 
 ### JSPs
 
-And all the JSP (Java Server Pages) with the HTML frontend are in the ```jsp``` subfolder:
+All the JSP files (Java Server Pages) for the HTML frontend are in the ```jsp``` subfolder:
 
 - ```/usr/share/usp/sls/webapps/sls/WEB-INF/jsp/```
 

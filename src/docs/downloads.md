@@ -7,5 +7,5 @@ The "Core Authenticate" container runs an instance of the
 
 SLS Container Image: 
 
-- ```https://devuspregistry.azurecr.io/usp/core/sls/sls:%SLS_VERSION%```
+- ```devuspregistry.azurecr.io/usp/core/sls/sls:%SLS_VERSION%```
 

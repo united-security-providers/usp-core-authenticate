@@ -36,12 +36,15 @@ nav:
       - Secure Login Service: 'releasenotes.md'
   - Configuration:
     - Container Internals: 'container.md'
-    - Settings: 'configuration.md'
+    - Settings:
+      - Authentication: 'authentication.md'
+      - Models: 'configuration.md'
+      - Logging: 'logging.md'
     - Kubernetes Manifests:
-        - Service: 'config_k8s_service.md'
-        - Deployment: 'config_k8s_deployment.md'
-        - Secrets: 'config_k8s_secret.md'
-        - Service: 'config_k8s_service.md'
+      - Service: 'config_k8s_service.md'
+      - Deployment: 'config_k8s_deployment.md'
+      - Secrets: 'config_k8s_secret.md'
+      - Service: 'config_k8s_service.md'
   - Operation:
     - Core Authenticate Upgrade: 'upgrade.md'
   - SLS Documentation:
