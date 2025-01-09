@@ -1,4 +1,4 @@
-### Deployment Manifest
+# Deployment Manifest
 
 The deployment manifest
 

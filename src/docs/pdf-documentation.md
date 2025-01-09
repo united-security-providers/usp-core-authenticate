@@ -1,4 +1,4 @@
-## SLS PDF Documentation
+# SLS PDF Documentation
 
 - [Administration Guide] 
 - [Scripting Guide] 

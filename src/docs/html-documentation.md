@@ -1,4 +1,4 @@
-## SLS HTML Documentation
+# SLS HTML Documentation
 
 - [Administration Guide]
 - [Scripting Guide]

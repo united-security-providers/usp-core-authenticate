@@ -1,4 +1,4 @@
-### Overrides ConfigMap Manifest
+# Overrides ConfigMap Manifest
 
 The SLS is configured through properties for the most part. The container comes with a sensible set of default
 configurations so that it will run out of the box, although it will not perform any actual authentication; for that,

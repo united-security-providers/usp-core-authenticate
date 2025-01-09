@@ -1,4 +1,4 @@
-### Secret Manifest
+# Secret Manifest
 
 For the OpenID Connect authentication adapter, a client secret must be configured for each client (see section 
 "overrides") with SLS configuration properties. The value there is a reference to a k8s secret, which must be

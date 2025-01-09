@@ -37,9 +37,16 @@ nav:
   - Configuration:
     - Container Internals: 'container.md'
     - Settings:
-      - Authentication: 'authentication.md'
-      - Models: 'configuration.md'
-      - Logging: 'logging.md'
+      - General:
+        - Authentication: 'authentication.md'
+        - Models: 'models.md'
+        - Logging: 'logging.md'
+      - OIDC OP:
+        - OIDC Settings: 'oidc-settings.md'
+        - Models: 'oidc-models.md'
+      - SAML 2.0 IdP:
+        - IdP Settings: 'saml-idp-settings.md'
+        - Models: 'saml-idp-models.md'
     - Kubernetes Manifests:
       - Service: 'config_k8s_service.md'
       - Deployment: 'config_k8s_deployment.md'

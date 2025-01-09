@@ -1,4 +1,4 @@
-### Service Manifest
+# Service Manifest
 
 The SLS is listening on port 8080 and exposes that port. So a typical example k8s service manifest would be:
 
