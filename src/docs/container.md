@@ -13,13 +13,25 @@ Tomcat configuration into the "conf" subdirectory of the Tomcat instance.
 
 The base (aka "CATALINA_HOME") directory of the Tomcat instance is
 
-- ```/usr/share/usp/sls```
+- ```/usr/share/usp/sls/```
 
 The SLS is a Java web application in the Tomcat "webapp/sls" subfolder:
 
-- ```/usr/share/usp/sls/webapps/sls```
+- ```/usr/share/usp/sls/webapps/sls/```
 
-### Main configuration
+### Log files
+
+All SLS log files are written to the "logs" subfolder of the Tomcat instance:
+
+- ```/usr/share/usp/sls/logs/```
+
+### Tomcat configuration
+
+The Tomcat configuration ("server.xml" with listeners etc.) is, as usual, in the "conf" subfolder of the Tomcat instance:
+
+- ```/usr/share/usp/sls/conf/```
+
+### Main SLS configuration
 
 Most SLS configuration files are within the ```WEB-INF``` subfolder:
 
