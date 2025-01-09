@@ -32,7 +32,7 @@ markdown_extensions:
 nav:
   - Welcome: 'index.md'
   - Release Notes:
-      - Secure Login Service: 'releasenotes/'
+      - Secure Login Service: 'releasenotes.md'
       - Core Authenticate: 'changelog.md'
   - Configuration:
     - Internals: 'internals.md'
