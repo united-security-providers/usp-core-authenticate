@@ -35,7 +35,7 @@ nav:
 #      - Core Authenticate: 'changelog.md'
       - Secure Login Service: 'releasenotes.md'
   - Configuration:
-    - Internals: 'internals.md'
+    - Container Internals: 'container.md'
     - Settings: 'configuration.md'
     - Kubernetes Manifests:
         - Service: 'config_k8s_service.md'
