@@ -39,7 +39,7 @@ For details on OIDC configuration, please see [SLS Administration Guide](files/%
 ## Registering a Relying Party
 
 In order to actually use the OIDC OP, registering a Relying Party will be the minimal required action. This can
-be done through the properties overrides (see [overrides](overrides/) for details) by setting a few custom configuration
+be done through the properties overrides (see [Kubernetes overrides](config_k8s_overrides.md) for details) by setting a few custom configuration
 properties. Example:
 
 ```properties

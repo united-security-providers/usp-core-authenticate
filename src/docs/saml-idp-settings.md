@@ -98,7 +98,7 @@ For details on SAML configuration, please see [SLS Administration Guide](files/%
 ## Registering a Service Provider
 
 In order to actually use the SAML IdP, registering a Service Provider will be the minimal required action. This can
-be done through the properties overrides (see [overrides](overrides/) for details) by setting a few custom configuration
+be done through the properties overrides (see [Kubernetes overrides](config_k8s_overrides.md) for details) by setting a few custom configuration
 properties. Example:
 
 ```properties
@@ -119,4 +119,4 @@ also require to upload the SP SAML metadata file "acmesp-metadata.xml" to the SL
 In certain deployment scenarios ("docker-compose" for example) you may be able to just mount this file directly into that
 path in the SLS. In others, like Kubernetes, you may need to use an approach where you mount this file into a temporary 
 folder and then copy it to the target directory at startup time, by adapting the container startup command. See 
-["Adding custom files"](/config_k8s_files/) for details.
+["Adding custom files"](config_k8s_files.md) for details.
