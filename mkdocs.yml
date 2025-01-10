@@ -51,10 +51,9 @@ nav:
     - Kubernetes Manifests:
       - Service: 'config_k8s_service.md'
       - Deployment: 'config_k8s_deployment.md'
-      - Service: 'config_k8s_service.md'
       - Overrides: 'config_k8s_overrides.md'
       - Custom Files: 'config_k8s_files.md'
-      - Secrets: 'config_k8s_secret.md'
+####      - Secrets: 'config_k8s_secret.md'
   - Operation:
     - Core Authenticate Upgrade: 'upgrade.md'
   - SLS Documentation:
