@@ -48,5 +48,5 @@ spec:
       app.kubernetes.io/instance: slsoidcop
 ```
 
-This mounts the contents of the ConfigMap "sls-config" (see [overrides](config_k8s_overrides.md) for details) into
+This mounts the contents of the ConfigMap "sls-config" (see [Kubernetes overrides](config_k8s_overrides.md) for details) into
 the required path for the SLS to process them at startup time.
