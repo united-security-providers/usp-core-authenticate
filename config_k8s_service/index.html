@@ -5,8 +5,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../config_k8s_secret/" rel="prev"/>
-<link href="../upgrade/" rel="next"/>
+<link href="../saml-idp-models/" rel="prev"/>
+<link href="../config_k8s_deployment/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
 <title>Service - USP Core Authenticate documentation</title>
@@ -225,14 +225,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-settings.md">
+<a class="md-nav__link" href="../oidc-settings/">
 <span class="md-ellipsis">
     OIDC Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-models.md">
+<a class="md-nav__link" href="../oidc-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -256,14 +256,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-settings.md">
+<a class="md-nav__link" href="../saml-idp-settings/">
 <span class="md-ellipsis">
     IdP Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-models.md">
+<a class="md-nav__link" href="../saml-idp-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -289,7 +289,7 @@
             Kubernetes Manifests
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
+<li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
@@ -305,17 +305,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_secret/">
+<a class="md-nav__link" href="../config_k8s_overrides/">
 <span class="md-ellipsis">
-    Secrets
+    Overrides
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../config_k8s_files/">
 <span class="md-ellipsis">
-    Service
+    Custom Files
   </span>
 </a>
 </li>
@@ -408,7 +407,7 @@
 apiVersion: v1
 metadata:
   name: slsoidcop
-  namespace: {{.Values.namespace}}
+  namespace: acme-authenticate
 spec:
   type: ClusterIP
   selector:

@@ -6,7 +6,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../config_k8s_service/" rel="prev"/>
-<link href="../config_k8s_secret/" rel="next"/>
+<link href="../config_k8s_overrides/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
 <title>Deployment - USP Core Authenticate documentation</title>
@@ -225,14 +225,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-settings.md">
+<a class="md-nav__link" href="../oidc-settings/">
 <span class="md-ellipsis">
     OIDC Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-models.md">
+<a class="md-nav__link" href="../oidc-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -256,14 +256,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-settings.md">
+<a class="md-nav__link" href="../saml-idp-settings/">
 <span class="md-ellipsis">
     IdP Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-models.md">
+<a class="md-nav__link" href="../saml-idp-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -305,16 +305,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_secret/">
+<a class="md-nav__link" href="../config_k8s_overrides/">
 <span class="md-ellipsis">
-    Secrets
+    Overrides
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_service/">
+<a class="md-nav__link" href="../config_k8s_files/">
 <span class="md-ellipsis">
-    Service
+    Custom Files
   </span>
 </a>
 </li>
@@ -402,7 +402,7 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="deployment-manifest">Deployment Manifest</h1>
-<p>The deployment manifest</p>
+<p>The deployment manifest for the Core Authenticate container looks, at the minimum, something like this:</p>
 <div class="highlight"><pre><span></span><code>kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -447,6 +447,8 @@ spec:
     matchLabels:
       app.kubernetes.io/instance: slsoidcop
 </code></pre></div>
+<p>This mounts the contents of the ConfigMap "sls-config" (see <a href="../config_k8s_overrides/">overrides</a> for details) into
+the required path for the SLS to process them at startup time.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

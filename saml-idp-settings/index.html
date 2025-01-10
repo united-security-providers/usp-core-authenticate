@@ -5,11 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="../config_k8s_overrides/" rel="prev"/>
-<link href="../upgrade/" rel="next"/>
+<link href="../oidc-models/" rel="prev"/>
+<link href="../saml-idp-models/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
-<title>Custom Files - USP Core Authenticate documentation</title>
+<title>IdP Settings - USP Core Authenticate documentation</title>
 <link href="../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -22,7 +22,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#adding-custom-files">
+<a class="md-skip" href="#saml-20-idp-settings">
           Skip to content
         </a>
 </div>
@@ -46,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Custom Files
+              IdP Settings
             
           </span>
 </div>
@@ -151,15 +151,15 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
 <span class="md-ellipsis">
     Settings
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
             Settings
@@ -241,26 +241,48 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_2_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
 <span class="md-ellipsis">
     SAML 2.0 IdP
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
+<nav aria-expanded="true" aria-labelledby="__nav_3_2_3_label" class="md-nav" data-md-level="3">
 <label class="md-nav__title" for="__nav_3_2_3">
 <span class="md-nav__icon md-icon"></span>
             SAML 2.0 IdP
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-settings/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    IdP Settings
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     IdP Settings
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#registering-a-service-provider">
+<span class="md-ellipsis">
+      Registering a Service Provider
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../saml-idp-models/">
@@ -275,15 +297,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-ellipsis">
     Kubernetes Manifests
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
             Kubernetes Manifests
@@ -310,34 +332,12 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<span class="md-ellipsis">
-    Custom Files
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
-<span class="md-ellipsis">
-    Custom Files
-  </span>
-</a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-custom-jsp-example">
+<a class="md-nav__link" href="../config_k8s_files/">
 <span class="md-ellipsis">
-      Adding custom JSP example
-    </span>
+    Custom Files
+  </span>
 </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -422,9 +422,9 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adding-custom-jsp-example">
+<a class="md-nav__link" href="#registering-a-service-provider">
 <span class="md-ellipsis">
-      Adding custom JSP example
+      Registering a Service Provider
     </span>
 </a>
 </li>
@@ -435,88 +435,120 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="adding-custom-files">Adding custom files</h1>
-<p>In some cases it might be necessary to create or add custom files to the container. One way of doing this is 
-to have those files on an external volume and mount that directly into the SLS web application; the other one
-is to override and extend the startup command of the container, and add any custom directive as need, before
-launching the Tomcat server.</p>
-<h2 id="adding-custom-jsp-example">Adding custom JSP example</h2>
-<p>If a custom JSP file should be added to the existing files, and it is not possible to do this through a simple mount
-directly into the "jsp" folder of the SLS web application, an alternative approach would be:</p>
+<h1 id="saml-20-idp-settings">SAML 2.0 IdP Settings</h1>
+<p>The following SAML IdP configuration properties are pre-configured in the "Core Authenticate" container:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#############saml.securityConfiguration.signatureReferenceDigestMethod=http://www.w3.org/2001/04/xmlenc#sha512</span>
+
+<span class="c1"># IdP EntityID,</span>
+<span class="na">idp.entity.id</span><span class="o">=</span><span class="s">https://${header.host}/idp/sls</span>
+<span class="c1">#idp.entity.id=https://sestest2.seslab.local/idp/sls</span>
+
+<span class="c1"># IdP Keystore.</span>
+<span class="na">idp.keystore.file</span><span class="o">=</span><span class="s">WEB-INF/sls.jks</span>
+<span class="na">idp.keystore.type</span><span class="o">=</span><span class="s">JKS</span>
+<span class="na">idp.keystore.pass</span><span class="o">=</span><span class="s">changeit</span>
+<span class="c1"># or store keystore password in a file and reference the file as follows:</span>
+<span class="c1">#idp.keystore.pass=${function.getValueFromFile('/path/to/file')}</span>
+<span class="c1"># Alias of IdP key pair in keystore.</span>
+<span class="na">idp.keystore.keypair.alias</span><span class="o">=</span><span class="s">idp</span>
+
+<span class="c1"># SSO/SLO: URL for each binding.</span>
+<span class="c1"># Currently only redirect binding is supported</span>
+<span class="na">idp.sso.redirect.url</span><span class="o">=</span><span class="s">https://${header.host}/ite/idp/sls/auth</span>
+<span class="na">idp.slo.redirect.url</span><span class="o">=</span><span class="s">https://${header.host}/ite/idp/sls/slo</span>
+
+<span class="c1">#idp.redirectWithMetaRefresh=slo</span>
+
+<span class="c1"># Optional: Offset in seconds to subtract from the issue instant in</span>
+<span class="c1"># assertions and saml responses. Use as workaround for problems with</span>
+<span class="c1"># clock sync on IdP and SP. Note however, that some SPs will conversely</span>
+<span class="c1"># not accept Assertions that have nominally been issued before the</span>
+<span class="c1"># Request was created/sent.</span>
+<span class="c1"># Default: 0.</span>
+<span class="c1">#idp.issueinstant.offset.secs=60</span>
+
+<span class="c1"># Validity period of assertion and conditions in assertion</span>
+<span class="c1"># (issue instant offset is added to that).</span>
+<span class="c1"># Default: 600 sec (10 min).</span>
+<span class="na">idp.assertion.validity.secs</span><span class="o">=</span><span class="s">600</span>
+
+<span class="c1"># Authentication method in the assertion.</span>
+<span class="na">idp.assertion.authentication.method</span><span class="o">=</span><span class="s">urn:oasis:names:tc:SAML:2.0:ac:classes:Password</span>
+
+<span class="c1"># Supported NameIDs.</span>
+<span class="c1"># If there is no NameIDPolicy in the request, the first one indicated is used.</span>
+<span class="c1"># Otherwise, the first match of format+allowcreate with the NameIDPolicy is used.</span>
+<span class="na">idp.assertion.nameid.1.format</span><span class="o">=</span><span class="s">urn:oasis:names:tc:SAML:2.0:nameid-format:transient</span>
+<span class="na">idp.assertion.nameid.1.allowcreate</span><span class="o">=</span><span class="s">true</span>
+<span class="c1"># idp.assertion.nameid.1.value=${idp.createRandomId()}</span>
+<span class="na">idp.assertion.nameid.1.value</span><span class="o">=</span><span class="s">saml-user_${session.getCred('username')}</span>
+<span class="c1"># Note that beyond simple use cases, it may be more convenient to use</span>
+<span class="c1"># JEXL functions idp.setAssertionAttribute[...]() to set attributes.</span>
+<span class="c1"># The name format to use, 'basic' and 'uri' are supported.</span>
+<span class="c1"># (This setting has the same effect as the deprecated idp.assertion.attr.&lt;no&gt;.type).</span>
+<span class="na">idp.assertion.attr.1.nameformat</span><span class="o">=</span><span class="s">basic</span>
+<span class="c1"># (Long) name of the attribute.</span>
+<span class="na">idp.assertion.attr.1.name</span><span class="o">=</span><span class="s">urn:oid:0.9.2342.19200300.100.1.1</span>
+<span class="c1"># Friendly name of the attribute.</span>
+<span class="na">idp.assertion.attr.1.friendlyname</span><span class="o">=</span><span class="s">uid</span>
+<span class="c1"># Use this setting for a single string value, typically a JEXL expression.</span>
+<span class="na">idp.assertion.attr.1.value</span><span class="o">=</span><span class="s">${session.getCred('USERNAME')}</span>
+<span class="c1"># Alternatively provide the name of a JEXL variable that may contain</span>
+<span class="c1"># either a single string value or a string array.</span>
+<span class="c1"># Note that the variable name must be indicated as a constant,</span>
+<span class="c1"># e.g. "var", not as a JEXL expression, e.g. "${var}.</span>
+<span class="c1"># idp.assertion.attr.1.value.variable=attribute.ldap.ismemberof</span>
+<span class="c1"># Optional setting that defines the value type to use:</span>
+<span class="c1"># - string (default)</span>
+<span class="c1"># - base64: given value(s) are first UTF-8 encoded and then base64 encoded</span>
+<span class="c1"># - base64.provided: given value(s) are taken as is, indicated that is base64 in attribute</span>
+<span class="c1">#idp.assertion.attr.1.value.type=string</span>
+<span class="c1"># Optional setting that enforces a profile:</span>
+<span class="c1"># - basic: Basic profile, see saml-profiles-2.0-os, section 8.1.</span>
+<span class="c1"># - x500ldap: X500/LDAP profile, saml-profiles-2.0-os, section 8.2.</span>
+<span class="c1">#idp.assertion.attr.1.profile=x500ldap</span>
+
+<span class="na">idp.assertion.attr.2.nameformat</span><span class="o">=</span><span class="s">uri</span>
+<span class="na">idp.assertion.attr.2.name</span><span class="o">=</span><span class="s">urn:oid:1.3.6.1.4.1.1466.115.121.1.12</span>
+<span class="na">idp.assertion.attr.2.friendlyname</span><span class="o">=</span><span class="s">dn</span>
+<span class="na">idp.assertion.attr.2.value.variable</span><span class="o">=</span><span class="s">queryResultArrayFromSsoAttr</span>
+<span class="na">idp.assertion.attr.2.value.type</span><span class="o">=</span><span class="s">base64</span>
+<span class="na">idp.assertion.attr.2.profile</span><span class="o">=</span><span class="s">x500ldap</span>
+
+<span class="c1"># SSO Attributes, stored after successful login at IdP.</span>
+<span class="c1"># Use JEXL ${idp.getSsoAttribute(&lt;key&gt;)} to retrieve.</span>
+<span class="na">idp.sso.attr.1.key</span><span class="o">=</span><span class="s">multi</span>
+<span class="c1"># Either set a single string variable explicitly...</span>
+<span class="c1">#idp.sso.attr.1.value=${session.getCred('USERNAME')}</span>
+<span class="c1"># ... or indicate the name of a variable that can contain</span>
+<span class="c1"># a single string value or an array of strings.</span>
+<span class="c1"># Note that the variable name must be indicated as a constant,</span>
+<span class="c1"># e.g. "var", not as a JEXL expression, e.g. "${var}.</span>
+<span class="na">idp.sso.attr.1.value.variable</span><span class="o">=</span><span class="s">queryResultArrayForSsoAttr</span>
+</code></pre></div>
+<p>For details on SAML configuration, please see <a href="../files/5.19.0.4/html-admin-guide/sls-adminguide.html#x10007_Heading1Tarsec_SAML_IdP_Adapter">SLS Administration Guide</a></p>
+<h2 id="registering-a-service-provider">Registering a Service Provider</h2>
+<p>In order to actually use the SAML IdP, registering a Service Provider will be the minimal required action. This can
+be done through the properties overrides (see <a href="../config_k8s_overrides/">Kubernetes overrides</a> for details) by setting a few custom configuration
+properties. Example:</p>
+<p><div class="highlight"><pre><span></span><code><span class="na">idp.sp.1.alias</span><span class="o">=</span><span class="s">acme-ltd-sp</span>
+<span class="na">idp.sp.1.metadata.provider</span><span class="o">=</span><span class="s">file</span>
+<span class="na">idp.sp.1.metadata.location</span><span class="o">=</span><span class="s">WEB-INF/idp/acmesp-metadata.xml</span>
+<span class="na">idp.sp.1.message.sign</span><span class="o">=</span><span class="s">sso.post,slo.redirect</span>
+<span class="na">idp.sp.1.message.checksign</span><span class="o">=</span><span class="s">true</span>
+<span class="na">idp.sp.1.sso</span><span class="o">=</span><span class="s">false</span>
+<span class="na">idp.sp.1.url</span><span class="o">=</span><span class="s">https://www.acme-ltd.com/sp</span>
+<span class="na">idp.sp.1.keystore.keypair.alias</span><span class="o">=</span><span class="s">myidp</span>
+</code></pre></div>
+This registers an SP with an alias "acme-ltd-sp" (can be using in various scripting functions etc.). However, this will
+also require to upload the SP SAML metadata file "acmesp-metadata.xml" to the SLS subdirectory "WEB-INF/idp/":</p>
 <ul>
-<li>Put the single JSP on a local volume (or in case of a Kubernetes environment possibly in a ConfigMap) and mount
-  this as a temporary folder in the container</li>
-<li>Copy the file at startup time from that temporary folder to the target "jsp" folder in the SLS web application</li>
-<li>Launch Tomcat</li>
+<li><code>/usr/share/usp/sls/webapps/sls/WEB-INF/idp/acmesp-metadata.xml</code></li>
 </ul>
-<p>Here is an example deployment manifest that mounts the volume with the custom JSP file to "/tmp/jsp-file/" and
-then copies the file from there into the SLS "jsp" folder in the customized startup command:</p>
-<div class="highlight"><pre><span></span><code>kind: Deployment
-apiVersion: apps/v1
-metadata:
-  name: slsoidcop
-  namespace: acme-authenticate
-spec:
-  template:
-    metadata:
-      labels:
-        app.kubernetes.io/instance: slsoidcop
-    spec:
-      containers:
-      - name: slsoidcop
-        image: devuspregistry.azurecr.io/usp/core/sls/sls:5.19.0.4
-        imagePullPolicy: Always
-        # Override Tomcat container startup command to perform custom operations
-        command: ['sh', '-v', '-c']
-        args:
-          - |
-            # Copy custom JSP file from temporary path into SLS jsp folder
-            cp /tmp/sls-jsp-file/*.jsp /usr/share/usp/sls/webapps/sls/WEB-INF/jsp/
-            # Now execute original Tomcat container startup command
-            catalina.sh run
-        volumeMounts:
-          # Mount the override properties
-          - mountPath: /var/lib/usp/sls/config
-            name: sls-config-volume
-          # Mount volume "sls-jsp-volume" into temporary path "/tmp/jsp-file"
-          - mountPath: /tmp/jsp-file
-            name: sls-jsp-volume
-      volumes:
-        - configMap:
-            defaultMode: 0775
-            name: sls-config
-          name: sls-config-volume
-        - configMap:
-            defaultMode: 0775
-            # Create volume "sls-jsp-volume" with contents from ConfigMap "sls-jsp-file"
-            name: sls-jsp-file
-          name: sls-jsp-volume
-  selector:
-    matchLabels:
-      app.kubernetes.io/instance: slsoidcop
-</code></pre></div>
-<p>And the ConfigMap "sls-jsp-file" with the custom JSP could look like this:</p>
-<div class="highlight"><pre><span></span><code>kind: ConfigMap
-apiVersion: v1
-metadata:
-  labels:
-    app.kubernetes.io/instance: slsoidcop
-    app.kubernetes.io/name: slsoidcop
-  name: sls-jsp-file
-  namespace: acme-authenticate
-data:
-  Login.jsp: |
-    &lt;%@ page session="true" pageEncoding="UTF-8" %&gt;
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-        &lt;head&gt;
-            &lt;title&gt;Custom Page&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-          &lt;h1&gt;Hello World&lt;/h1&gt;
-        &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre></div>
+<p>In certain deployment scenarios ("docker-compose" for example) you may be able to just mount this file directly into that
+path in the SLS. In others, like Kubernetes, you may need to use an approach where you mount this file into a temporary 
+folder and then copy it to the target directory at startup time, by adapting the container startup command. See 
+<a href="../config_k8s_files/">"Adding custom files"</a> for details.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

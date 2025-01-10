@@ -5,9 +5,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../config_k8s_deployment/" rel="prev"/>
+<link href="../config_k8s_files/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.5.3, mkdocs-material-9.5.9" name="generator"/>
-<title>Overrides ConfigMap Manifest - USP Core Authenticate documentation</title>
+<title>Overrides - USP Core Authenticate documentation</title>
 <link href="../assets/stylesheets/main.f2e4d321.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -44,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Overrides ConfigMap Manifest
+              Overrides
             
           </span>
 </div>
@@ -128,15 +130,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
 <span class="md-ellipsis">
     Configuration
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Configuration
@@ -223,14 +225,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-settings.md">
+<a class="md-nav__link" href="../oidc-settings/">
 <span class="md-ellipsis">
     OIDC Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-models.md">
+<a class="md-nav__link" href="../oidc-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -254,14 +256,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-settings.md">
+<a class="md-nav__link" href="../saml-idp-settings/">
 <span class="md-ellipsis">
     IdP Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-models.md">
+<a class="md-nav__link" href="../saml-idp-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -273,15 +275,15 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
 <span class="md-ellipsis">
     Kubernetes Manifests
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
             Kubernetes Manifests
@@ -301,17 +303,18 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_secret/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
-    Secrets
+    Overrides
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_service/">
+<a class="md-nav__link" href="../config_k8s_files/">
 <span class="md-ellipsis">
-    Service
+    Custom Files
   </span>
 </a>
 </li>
@@ -398,13 +401,13 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="overrides-configmap-manifest">Overrides ConfigMap Manifest</h1>
+<h1 id="overrides-configmap-manifest">"Overrides" ConfigMap Manifest</h1>
 <p>The SLS is configured through properties for the most part. The container comes with a sensible set of default
 configurations so that it will run out of the box, although it will not perform any actual authentication; for that,
 a minimal set of configuration properties will be required.</p>
 <p>This is achieved through a k8s ConfigMap manifest which defines a set of key-/value pairs that will be provided in
 the SLS instance; if any properties are defined there that are already pre-configured in the SLS, the pre-configured
-values will be overridden. Hence the "overrides" term used here.</p>
+values will be overridden (hence the "overrides" term used here).</p>
 <p>An example configuration ConfigMap which configures the SLS to use the internal file adapter for (demo) authentication
 would look like this:</p>
 <div class="highlight"><pre><span></span><code>kind: ConfigMap
@@ -420,9 +423,11 @@ data:
     adapter.authentication=file
     oidc.op.issuer=USP-Core-Authenticate
     oidc.op.rp.10.client_id=Some_Client
-    oidc.op.rp.10.client_secret={{ .Values.slsoidcop.clientSecret }}
+    oidc.op.rp.10.client_secret=myClientSecret
     oidc.op.rp.10.redirect_uris=https://login.acme.com:8443/core-authenticate/callback
 </code></pre></div>
+<p>This will create a file "custom.overrides" which then has to be mounted into the right location in the container to
+be processed by the SLS at startup time.</p>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>

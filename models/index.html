@@ -226,14 +226,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-settings.md">
+<a class="md-nav__link" href="../oidc-settings/">
 <span class="md-ellipsis">
     OIDC Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../oidc-models.md">
+<a class="md-nav__link" href="../oidc-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -257,14 +257,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-settings.md">
+<a class="md-nav__link" href="../saml-idp-settings/">
 <span class="md-ellipsis">
     IdP Settings
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../saml-idp-models.md">
+<a class="md-nav__link" href="../saml-idp-models/">
 <span class="md-ellipsis">
     Models
   </span>
@@ -305,16 +305,16 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_secret/">
+<a class="md-nav__link" href="../config_k8s_overrides/">
 <span class="md-ellipsis">
-    Secrets
+    Overrides
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../config_k8s_service/">
+<a class="md-nav__link" href="../config_k8s_files/">
 <span class="md-ellipsis">
-    Service
+    Custom Files
   </span>
 </a>
 </li>
@@ -402,7 +402,14 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="models-flows">Models (Flows)</h1>
-<p>TBD</p>
+<p>Whenever the SLS starts a session, that session will be bound to a so-called model; which is number of pre-defined
+states that will be processed based on the users actions or backend responses. So a model is a flow of actions,
+requests and responses. It is configured in a set of properties.</p>
+<ul>
+<li>To configure custom models in the Core Authenticate container, the properties must be set as overrides
+  (see <a href="../config_k8s_overrides/">Kubernetes overrides</a> for details).</li>
+<li>For details on model configuration properties, please see <a href="../files/5.19.0.4/html-admin-guide/sls-adminguide.html#x29792_Heading1Tarsec_Model">SLS Administration Guide</a></li>
+</ul>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
