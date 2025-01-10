@@ -405,19 +405,19 @@
 <p>Whenever an authentication procedure must be enhanced with a 2nd factor, some kind of challenge-/response step needs
 to be used. The following options are supported in the SLS:</p>
 <ul>
-<li>"simple" - The SLS generates a secure random code that can be sent to the user by SMS and has to be entered manually.</li>
-<li>"googleauth" - The user has to provide a time-based response code from an authenticator app that was registered previously.</li>
-<li>"webauthn" - The user is identified through their client, possibly with biometric mechanisms (e.g. fingerprint scanner
+<li><code>simple</code> - The SLS generates a secure random code that can be sent to the user by SMS and has to be entered manually.</li>
+<li><code>googleauth</code> - The user has to provide a time-based response code from an authenticator app that was registered previously.</li>
+<li><code>webauthn</code> - The user is identified through their client, possibly with biometric mechanisms (e.g. fingerprint scanner
   on a smartphone), either as a 2nd factor or in a password-less flow.</li>
 </ul>
 <p>A few hints about each one:</p>
 <ul>
-<li>With the "simple" challenge adapter, the model state "create.challenge" must be used. This will execute the creation
+<li>With the <code>simple</code> challenge adapter, the model state <code>create.challenge</code> must be used. This will execute the creation
   of the secure random value that is then available as a scripting variable to be sent to the user, usually by way of
   an HTTP call to a REST backend.</li>
-<li>With the "googleauth" challenge adapter, no "create.challenge" step is necessary, since the SLS does not create the
+<li>With the <code>googleauth</code> challenge adapter, no <code>create.challenge</code> step is necessary, since the SLS does not create the
   challenge; it's created automatically based on the current time.</li>
-<li>With "webauthn" things get a bit more complicated as the configuration details depend heavily on how WebAuthn should
+<li>With <code>webauthn</code> things get a bit more complicated as the configuration details depend heavily on how WebAuthn should
   be used (2FA vs password-less).</li>
 </ul>
 <p>For details on how to configure each challenge/response adapter please consult the 
