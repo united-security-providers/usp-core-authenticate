@@ -8,5 +8,5 @@ In the rare situtations where there are breaking changes, this page will documen
 
 ## Core Authenticate Migration Guide
 
-### Core Authenticate a.b.c to x.y.z
+_no migration information available yet._
 
