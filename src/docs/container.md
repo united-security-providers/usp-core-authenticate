@@ -87,8 +87,3 @@ All the JSP files (Java Server Pages) for the HTML frontend are in the ```jsp```
 
 When using custom JSP files, the external volume containing the custom JSPs must be mounted into this path.
 
-## Kubernetes Considerations
-
-When running the container in Kubernetes, it is also possible to use "ConfigMap" manifests instead of actual volumes
-(see ####TODO#### for details and examples).
-
