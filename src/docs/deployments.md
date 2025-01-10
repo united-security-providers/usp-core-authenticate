@@ -6,7 +6,7 @@ In an environment like Docker-Compose, the configuration of the SLS in the Core 
 is pretty straight-forward. A number of directories should be mounted into the running container, providing
 the required files.
 
-TBD
+See TBD
 
 ## Kubernetes
 

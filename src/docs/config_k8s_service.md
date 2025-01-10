@@ -7,7 +7,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: slsoidcop
-  namespace: {{.Values.namespace}}
+  namespace: acme-authenticate
 spec:
   type: ClusterIP
   selector:

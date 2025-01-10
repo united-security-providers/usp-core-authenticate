@@ -1,7 +1,6 @@
 # Deployment Manifest
 
-The deployment manifest
-
+The deployment manifest for the Core Authenticate container looks, at the minimum, something like this:
 
 ```
 kind: Deployment
@@ -48,3 +47,6 @@ spec:
     matchLabels:
       app.kubernetes.io/instance: slsoidcop
 ```
+
+This mounts the contents of the ConfigMap "sls-config" (see [overrides](config_k8s_overrides.md) for details) into
+the required path for the SLS to process them at startup time.
