@@ -1,7 +1,8 @@
 site_name: 'USP Core Authenticate documentation'
 docs_dir: './docs'                        # Where to find the English markdown files
 site_dir: './generated'                      # Where to put the English HTML files
-#site_url: 'https://github.com/waf'
+site_url: 'https://docs.united-security-providers.ch/usp-core-authenticate'
+copyright: '&copy; 2026 United Security Providers AG. All Rights Reserved.'
 
 theme:
   name: material
@@ -11,6 +12,19 @@ theme:
   language: en                                    # The build's language
 extra_css:
   - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/united-security-providers/
+      name: United Security Providers on Linkedin
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@United-security-providersCh
+      name: United Security Providers on Youtube
+  version:
+    provider: mike
+    default: latest
+  homepage: https://docs.united-security-providers.ch/usp-core-authenticate
 
 plugins:
   - search:
