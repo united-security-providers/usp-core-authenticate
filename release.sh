@@ -145,6 +145,8 @@ if [ $DEPLOY ]; then
     mike deploy --update-aliases --push "${SLS_VERSION}" $RELEASE_ALIAS
 #    mkdocs gh-deploy --force
     echo "Successfully deployed to to GitHub pages"
+    git tag -f ${SLS_VERSION}
+    git push -f --tags
 fi
 
 if [[ $DEPLOY && "${RELEASE_ALIAS}" == "latest" ]]; then
