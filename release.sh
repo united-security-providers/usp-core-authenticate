@@ -137,15 +137,17 @@ done
 
 echo "Successfully generated site (Markdown) at ./docs."
 
+VERSION=$(echo "$1" | sed -E 's/^v?([0-9]+)\.([0-9]+)\.([0-9]+)\.[0-9]+$/\1.\2.x/')
+
 [ "$2" == "deploy" ] && DEPLOY=true && shift
 [ "$2" == "--latest" ] && RELEASE_ALIAS=latest && shift
 
 if [ $DEPLOY ]; then
     echo "Deploying to GitHub pages..."
-    mike deploy --update-aliases --push "${SLS_VERSION}" $RELEASE_ALIAS
+    mike deploy --update-aliases --push "${VERSION}" $RELEASE_ALIAS
 #    mkdocs gh-deploy --force
     echo "Successfully deployed to to GitHub pages"
-    git tag -f ${SLS_VERSION}
+    git tag -f ${VERSION}
     git push -f --tags
 fi
 
