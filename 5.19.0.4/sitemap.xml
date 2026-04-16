@@ -2,90 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/authentication/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/challenge_response/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/config_k8s_deployment/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/config_k8s_files/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/config_k8s_overrides/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/config_k8s_secret/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/config_k8s_service/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/container/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/deployments/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/downloads/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/html-documentation/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/logging/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/models/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/oidc-models/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/oidc-settings/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/pdf-documentation/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/releasenotes/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/saml-idp-models/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/saml-idp-settings/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/upgrade/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
     <url>
          <loc>https://docs.united-security-providers.ch/usp-core-authenticate/5.19.0.4/files/5.19.0.4/releasenotes/</loc>
-         <lastmod>2026-04-02</lastmod>
+         <lastmod>2026-04-16</lastmod>
     </url>
 </urlset>
