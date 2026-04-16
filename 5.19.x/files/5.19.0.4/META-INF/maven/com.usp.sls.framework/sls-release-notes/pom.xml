@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.usp.sls.framework</groupId>
+		<artifactId>sls-framework-root</artifactId>
+		<version>5.19.0.4</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>sls-release-notes</artifactId>
+	<packaging>jar</packaging>
+	<name>SLS Framework Release Notes</name>
+	<description>Containes the release notes for all SLS releases.</description>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<activation>
+				<property><name>release</name></property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-enforcer-plugin</artifactId>
+						<dependencies>
+							<dependency>
+								<groupId>com.usp.sls.framework</groupId>
+								<artifactId>sls-enforcer-rule</artifactId>
+								<version>${project.version}</version>
+							</dependency>
+						</dependencies>
+						<executions>
+							<execution>
+								<id>enforce</id>
+								<phase>compile</phase>
+								<configuration>
+									<rules>
+										<SlsValidateReleaseNotesRule implementation="com.usp.sls.enforcer.rule.SlsValidateReleaseNotesRule" />
+									</rules>
+								</configuration>
+								<goals>
+									<goal>enforce</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<classesDirectory>src/main/releasenotes</classesDirectory>
+					<includes>
+						<include>**/*</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
